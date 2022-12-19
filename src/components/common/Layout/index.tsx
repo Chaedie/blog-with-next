@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
+import Head from 'next/head';
 import { PropsWithChildren } from 'react';
+import metadata from '../../../data/metadata';
 import NavBar from '../NavBar';
 
 interface Props {}
@@ -7,7 +9,12 @@ interface Props {}
 function Layout({ children }: PropsWithChildren) {
   return (
     <div>
-      <NavBar />
+      <Head>
+        <title>{metadata.title}</title>
+      </Head>
+      <header>
+        <NavBar />
+      </header>
       <Container>
         <div>{children}</div>
       </Container>
@@ -17,9 +24,9 @@ function Layout({ children }: PropsWithChildren) {
 
 export default Layout;
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  padding: 1rem;
   font-size: 16px;
 `;

@@ -17,7 +17,7 @@ function NavBar() {
       <Box sx={{ borderBottom: 1, borderColor: 'primary' }}>
         <Tabs value={NAV_TABS[router.pathname]} aria-label="basic tabs example">
           <Link href="/">
-            <Tab label="Home" />
+            <Tab label="Blog" />
           </Link>
           <Link href="/about">
             <Tab label="About" />
@@ -25,7 +25,6 @@ function NavBar() {
           <Link href="/portfolio">
             <Tab label="Portfolio" />
           </Link>
-          <Tab label="ETC" />
         </Tabs>
       </Box>
     </nav>
@@ -34,4 +33,4 @@ function NavBar() {
 
 export default NavBar;
 
-const NAV_TABS: NavTabs = { '/': 0, '/about': 1, '/portfolio': 2, '/etc': 3 };
+const NAV_TABS: NavTabs = { '/': 0, '/about': 1, '/portfolio': 2 };

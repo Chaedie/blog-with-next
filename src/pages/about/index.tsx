@@ -9,7 +9,7 @@ interface Props {}
 function AboutPage() {
   return (
     <Layout>
-      <Typography variant="h4" color="primary" fontWeight="bold">
+      <Typography variant="h5" color="primary" fontWeight="bold">
         임채동 | Front-End | 회고 드리븐
       </Typography>
       <h2>💁🏼‍♂️ About me</h2>
