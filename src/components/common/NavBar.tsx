@@ -2,7 +2,6 @@ import { Tab, Tabs, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
 
 interface Props {}
 interface NavTabs {

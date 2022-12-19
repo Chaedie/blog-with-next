@@ -16,7 +16,7 @@ function Layout({ children }: PropsWithChildren) {
         <NavBar />
       </header>
       <Container>
-        <div>{children}</div>
+        <div className="containerBox">{children}</div>
       </Container>
     </div>
   );
@@ -29,4 +29,8 @@ const Container = styled.main`
   justify-content: center;
   padding: 1rem;
   font-size: 16px;
+
+  .containerBox {
+    max-width: 700px;
+  }
 `;

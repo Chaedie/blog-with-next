@@ -1,7 +1,5 @@
-import { ArrowBack, ArrowRightRounded, Code } from '@mui/icons-material';
-import { Box, Typography } from '@mui/material';
+import { Typography } from '@mui/material';
 import Link from 'next/link';
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import Layout from '../../components/common/Layout';
 
 interface Props {}

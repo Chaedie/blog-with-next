@@ -2,12 +2,10 @@ import Layout from '../../components/common/Layout';
 
 interface Props {}
 
-function PostDetailPage() {
+export default function PortfolioPage() {
   return (
     <Layout>
-      <h1>PostDetailPage</h1>
+      <h1>PortfolioPage</h1>
     </Layout>
   );
 }
-
-export default PostDetailPage;
