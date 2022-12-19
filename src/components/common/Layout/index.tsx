@@ -31,6 +31,6 @@ const Container = styled.main`
   font-size: 16px;
 
   .containerBox {
-    max-width: 700px;
+    width: 700px;
   }
 `;
