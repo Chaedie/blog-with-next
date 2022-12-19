@@ -1,8 +1,11 @@
 import styled from '@emotion/styled';
+import { GitHub } from '@mui/icons-material';
 import Head from 'next/head';
+import Link from 'next/link';
 import { PropsWithChildren } from 'react';
 import metadata from '../../../data/metadata';
 import NavBar from '../NavBar';
+import Footer from './Footer';
 
 interface Props {}
 
@@ -18,6 +21,7 @@ function Layout({ children }: PropsWithChildren) {
       <Container>
         <div className="containerBox">{children}</div>
       </Container>
+      <Footer />
     </div>
   );
 }
