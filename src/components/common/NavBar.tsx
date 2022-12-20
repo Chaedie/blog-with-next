@@ -1,9 +1,8 @@
-import { Tab, Tabs, Typography } from '@mui/material';
+import { Tab, Tabs } from '@mui/material';
 import { Box } from '@mui/system';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-interface Props {}
 interface NavTabs {
   [key: string]: number;
 }

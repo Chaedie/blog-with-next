@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 import classes from './portfolio-list.module.css';
+import { Collapse } from '@mui/material';
 
 interface Props {}
 
 export default function PortfolioList() {
+  const [grow, setGrow] = useState(false);
+  const timeout = useRef<NodeJS.Timeout>();
+
+  useEffect(() => {
+    timeout.current = setTimeout(() => {
+      setGrow(true);
+    }, 0);
+    return () => clearTimeout(timeout.current);
+  }, []);
   return (
     <ul className={classes.list}>
       {PORTFOLIO_LIST.map(portfolio => {
         const { id, title, description, date, image, linkUrl } = portfolio;
         return (
-          <PortfolioItem
-            key={id}
-            id={'1'}
-            title={title}
-            description={description}
-            date={date}
-            image={image}
-            linkUrl={linkUrl}
-          />
+          <Collapse in={grow} key={id}>
+            <PortfolioItem
+              id={'1'}
+              title={title}
+              description={description}
+              date={date}
+              image={image}
+              linkUrl={linkUrl}
+            />
+          </Collapse>
         );
       })}
     </ul>

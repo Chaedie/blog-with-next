@@ -31,7 +31,7 @@ export default Layout;
 const Container = styled.main`
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0.25rem;
   font-size: 16px;
 
   .containerBox {
