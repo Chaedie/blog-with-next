@@ -25,6 +25,7 @@
   margin: 0.5rem 0;
 }
 
+.type,
 .description,
 .date,
 .address {
@@ -35,6 +36,7 @@
   margin: 5px 0;
 }
 
+.type svg,
 .description svg,
 .date svg,
 .address svg {
@@ -43,6 +45,7 @@
   color: #666666;
 }
 
+.content .type,
 .content .description {
   color: #666666;
   font-weight: bold;
@@ -111,4 +114,11 @@
     flex-direction: row;
     justify-content: flex-end;
   }
+}
+
+.primary {
+  color: #3f50b5 !important;
+}
+.secondary {
+  color: #ba000d !important;
 }

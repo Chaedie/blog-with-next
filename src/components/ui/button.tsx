@@ -7,7 +7,7 @@ interface Props {
   link: string;
 }
 
-export default function Button({ children, link }: Props) {
+export default function StyledButton({ children, link }: Props) {
   return (
     <Link href={link} className={classes.btn}>
       {children}
