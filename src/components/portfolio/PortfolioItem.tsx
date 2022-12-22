@@ -29,7 +29,7 @@ export default function PortfolioItem({
 
   return (
     <li className={classes.item}>
-      <Image src={image} alt={title} width={imageWidth} height={imageHeight} />
+      <Image src={image} alt={title} width={imageWidth} height={imageHeight} priority={true} />
       <div className={classes.content}>
         <div className={classes.summary}>
           <h2>{title}</h2>
