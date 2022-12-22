@@ -6,7 +6,11 @@ Next.js로 만든 블로그입니다.
 
 ## STACK
 
-Next.js, Typescript, Emotion
+Next.js, Typescript
+
+Emotion(MUI), CSS modules
+
+AOS
 
 ## 개발 일지
 
@@ -31,3 +35,7 @@ Next.js, Typescript, Emotion
   - [ ] Blog 마크다운 뷰
 
   - [ ] Blog 마크다운 에디터로 작성
+
+### 트러블 슈팅
+
+- [Next.js에서 AOS 적용](https://chaedies-dev-log.tistory.com/entry/Nextjs-Nextjs-%EC%97%90%EC%84%9C-aos-%EC%82%AC%EC%9A%A9%EB%B2%95-Animation-On-Scroll)

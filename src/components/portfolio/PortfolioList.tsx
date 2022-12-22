@@ -1,26 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 import classes from './portfolio-list.module.css';
-import { Collapse } from '@mui/material';
 import { PORTFOLIO_LIST } from '../../data/portfolioData';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function PortfolioList() {
   const [grow, setGrow] = useState(false);
 
   useEffect(() => {
+    AOS.init({ offset: 100 });
     setTimeout(() => {
       setGrow(true);
     }, 50);
   }, []);
 
   return (
-    <Collapse in={grow}>
-      <ul className={classes.list}>
-        {PORTFOLIO_LIST.map(portfolio => {
-          const { id, type, title, description, date, image, imageWidth, imageHeight, linkUrl } = portfolio;
-          return (
+    <ul className={classes.list}>
+      {PORTFOLIO_LIST.map(portfolio => {
+        const { id, type, title, description, date, image, imageWidth, imageHeight, linkUrl } = portfolio;
+        return (
+          <div key={id} data-aos="fade-up">
             <PortfolioItem
-              key={id}
               id={id}
               type={type}
               title={title}
@@ -31,9 +32,9 @@ export default function PortfolioList() {
               imageHeight={imageHeight}
               linkUrl={linkUrl}
             />
-          );
-        })}
-      </ul>
-    </Collapse>
+          </div>
+        );
+      })}
+    </ul>
   );
 }

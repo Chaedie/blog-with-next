@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { GitHub } from '@mui/icons-material';
 import Head from 'next/head';
-import Link from 'next/link';
 import { PropsWithChildren } from 'react';
 import metadata from '../../../data/metadata';
 import NavBar from '../NavBar';
@@ -18,9 +16,7 @@ function Layout({ children }: PropsWithChildren) {
       <header>
         <NavBar />
       </header>
-      <Container>
-        <div className="containerBox">{children}</div>
-      </Container>
+      <Container>{children}</Container>
       <Footer />
     </div>
   );
@@ -30,11 +26,9 @@ export default Layout;
 
 const Container = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 0.25rem;
+  text-align: center;
+  padding: 0.25rem 1rem;
   font-size: 16px;
-
-  .containerBox {
-    width: 700px;
-  }
 `;
