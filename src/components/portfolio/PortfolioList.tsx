@@ -6,13 +6,8 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export default function PortfolioList() {
-  const [grow, setGrow] = useState(false);
-
   useEffect(() => {
     AOS.init({ offset: 100 });
-    setTimeout(() => {
-      setGrow(true);
-    }, 50);
   }, []);
 
   return (

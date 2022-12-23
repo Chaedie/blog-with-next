@@ -1,13 +1,11 @@
 import styled from '@emotion/styled';
 import Head from 'next/head';
 import { PropsWithChildren } from 'react';
-import metadata from '../../../data/metadata';
-import NavBar from '../NavBar';
+import metadata from '../../data/metadata';
+import NavBar from './NavBar';
 import Footer from './Footer';
 
-interface Props {}
-
-function Layout({ children }: PropsWithChildren) {
+export default function Layout({ children }: PropsWithChildren) {
   return (
     <div>
       <Head>
@@ -22,12 +20,11 @@ function Layout({ children }: PropsWithChildren) {
   );
 }
 
-export default Layout;
-
 const Container = styled.main`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 0.25rem 1rem;
   font-size: 16px;
