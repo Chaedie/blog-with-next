@@ -8,7 +8,9 @@ const nextConfig = {
       'avatars.githubusercontent.com',
       'camo.githubusercontent.com',
       'velog.velcdn.com',
+      'leetcard.jacoblin.cool',
     ],
+    dangerouslyAllowSVG: true,
   },
 };
 

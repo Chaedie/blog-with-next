@@ -1,4 +1,5 @@
 import { Typography } from '@mui/material';
+import Image from 'next/image';
 import Link from 'next/link';
 
 function AboutPage() {
@@ -24,7 +25,12 @@ function AboutPage() {
       </Typography>
       <hr />
       <br />
-      <img src="https://leetcard.jacoblin.cool/chaedie?ext=heatmap&theme=unicorn" alt="LeetCode Heatmap" />
+      <Image
+        src="https://leetcard.jacoblin.cool/chaedie?ext=heatmap&theme=unicorn"
+        alt="LeetCode Heatmap"
+        width={500}
+        height={320}
+      />
     </div>
   );
 }

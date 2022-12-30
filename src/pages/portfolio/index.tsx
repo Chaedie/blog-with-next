@@ -27,5 +27,6 @@ export async function getStaticProps() {
 
   return {
     props: { portfolioList: await getPortFolios() },
+    // revalidate: 60 * 60, // 1hour
   };
 }
