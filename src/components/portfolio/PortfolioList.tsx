@@ -1,18 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import PortfolioItem from './PortfolioItem';
 import classes from './portfolio-list.module.css';
-import { PORTFOLIO_LIST } from '../../data/portfolioData';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Portfolio } from '../../types/portfolio';
 
-export default function PortfolioList() {
+interface Props {
+  portfolioList: Portfolio[];
+}
+
+export default function PortfolioList({ portfolioList }: Props) {
   useEffect(() => {
     AOS.init({ offset: 100 });
   }, []);
 
   return (
     <ul className={classes.list}>
-      {PORTFOLIO_LIST.map(portfolio => {
+      {portfolioList.map(portfolio => {
         const { id, type, title, description, date, image, imageWidth, imageHeight, linkUrl } = portfolio;
         return (
           <div key={id} data-aos="fade-up">
