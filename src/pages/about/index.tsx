@@ -22,8 +22,9 @@ function AboutPage() {
       <Typography sx={linkStyle}>
         <Link href="https://chaedies-dev-log.tistory.com/">[기술 블로그 | Tistory]</Link>
       </Typography>
-      <br />
       <hr />
+      <br />
+      <img src="https://leetcard.jacoblin.cool/chaedie?ext=heatmap&theme=unicorn" alt="LeetCode Heatmap" />
     </div>
   );
 }
