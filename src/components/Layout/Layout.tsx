@@ -28,4 +28,8 @@ const Container = styled.main`
   text-align: center;
   padding: 0.25rem 1rem;
   font-size: 16px;
+
+  img {
+    max-width: 100%;
+  }
 `;
